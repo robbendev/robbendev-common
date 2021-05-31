@@ -1,7 +1,22 @@
-<<<<<<< HEAD
-#workshop-common
+# robbendev-common
 
-modify tag
-=======
-#robbendev
->>>>>>> 5267780d373fa33d98600521dfa34a3c363a7cec
+This is a tool library to get you started quickly
+
+## ENVIRONMENT
+
+- springboot 2.0+
+- java 1.8+
+
+## QUICK START
+
+### maven
+
+```xml
+
+<dependency>
+    <groupId>com.robbendev</groupId>
+    <artifactId>robbendev-parent</artifactId>
+    <version>1.0-RELEASE</version>
+</dependency>
+```
+

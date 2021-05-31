@@ -25,7 +25,7 @@ public class BizException extends RuntimeException implements Serializable {
     /**
      * 错误码
      */
-    private int code;
+    private String code;
 
     /**
      * 错误信息
@@ -48,24 +48,24 @@ public class BizException extends RuntimeException implements Serializable {
 
 
     public BizException(String message) {
-        this.code = 500;
+        this.code = "500";
         this.message = message;
     }
 
     public BizException(String format, Object... args) {
-        this.code = 500;
+        this.code = "500";
         this.message = String.format(format, args);
     }
 
 
-    public BizException(int code, String message) {
+    public BizException(String code, String message) {
         super(message);
         this.code = code;
         this.message = message;
         this.putErrorMap(code, message, null);
     }
 
-    public BizException(int code, String message, Object data) {
+    public BizException(String code, String message, Object data) {
         super(message);
         this.code = code;
         this.message = message;
@@ -73,7 +73,7 @@ public class BizException extends RuntimeException implements Serializable {
         this.putErrorMap(code, message, data);
     }
 
-    private void putErrorMap(int code, String message, Object data) {
+    private void putErrorMap(String code, String message, Object data) {
         this.errorMap.put("code", code);
         this.errorMap.put("message", message);
         this.errorMap.put("data", data);

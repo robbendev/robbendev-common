@@ -1,13 +1,12 @@
 package com.robbendev.common.base;
 
 import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.io.Serializable;
 
 /**
  * <p>
- *
+ * 通用请求基类
  * </p>
  *
  * @author robbendev
@@ -16,9 +15,9 @@ import java.io.Serializable;
 @Data
 public class BaseRequest implements Serializable {
 
-    protected int pageNum = 1;
+	protected int pageNum = 1;
 
-    protected int pageSize = 10;
+	protected int pageSize = 10;
 
-    private Serializable currentUserId;
+	private Serializable currentUserId;
 }
